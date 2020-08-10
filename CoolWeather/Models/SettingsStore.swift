@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SettingsStore {
+class SettingsStore {
     
     var historyDays: Int {
         didSet {
