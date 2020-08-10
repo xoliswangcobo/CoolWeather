@@ -48,13 +48,16 @@ extension WeatherService: TargetType {
                 parameters["lat"] = lat
                 parameters["lon"] = lon
                 parameters["dt"] = dt
+                parameters["appid"] = AppConstants.appID
             case .historical(let lat, let lon, let dt):
                 parameters["lat"] = lat
                 parameters["lon"] = lon
                 parameters["dt"] = dt
+                parameters["appid"] = AppConstants.appID
             case .current(let lat, let lon):
                 parameters["lat"] = lat
                 parameters["lon"] = lon
+                parameters["appid"] = AppConstants.appID
         }
         
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
