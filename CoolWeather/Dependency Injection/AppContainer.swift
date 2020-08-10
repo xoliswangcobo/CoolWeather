@@ -9,6 +9,7 @@
 import Foundation
 import Swinject
 import Moya
+import CoreLocation
 
 class AppContainer {
     
@@ -27,7 +28,11 @@ class AppContainer {
         }
         
         container.register(WeatherViewModel.self) { resolver in
-            return WeatherViewModel.init(provider: resolver.resolve(MoyaProvider<WeatherService>.self)!)
+            return WeatherViewModel.init(provider: resolver.resolve(MoyaProvider<WeatherService>.self)!, locationManager: CLLocationManager.init())
+        }
+        
+        container.register(SettingsStore.self) { resolver in
+            return SettingsStore.current
         }
     }
 }

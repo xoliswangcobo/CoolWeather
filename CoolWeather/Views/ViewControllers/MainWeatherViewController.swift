@@ -10,4 +10,5 @@ import UIKit
 
 class MainWeatherViewController: UIViewController {
     var viewModel: WeatherViewModel!
+    var settings: SettingsStore!
 }

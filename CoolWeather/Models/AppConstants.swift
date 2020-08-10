@@ -14,4 +14,8 @@ struct AppConstants {
     
     static let appID: String = "c5a2b88f2c489101cd63677be46cbbf1"
     
+    static let historyDaysLimit: Int = 5
+    
+    static let forecastDaysLimit:Int = 7
+    
 }

@@ -17,6 +17,11 @@ extension SwinjectStoryboard {
         
         defaultContainer.storyboardInitCompleted(MainWeatherViewController.self) { _, controller in
             controller.viewModel = appContainer.resolve(WeatherViewModel.self)
+            controller.settings = appContainer.resolve(SettingsStore.self)
+        }
+        
+        defaultContainer.storyboardInitCompleted(SettingsViewController.self) { _, controller in
+            controller.settings = appContainer.resolve(SettingsStore.self)
         }
     }
 }

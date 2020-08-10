@@ -25,6 +25,10 @@
 		F3BDC2C224E1A735009D538B /* UIView+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2C024E1A734009D538B /* UIView+DropShadow.swift */; };
 		F3BDC2C324E1A735009D538B /* Decodable+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2C124E1A734009D538B /* Decodable+Any.swift */; };
 		F3BDC2C524E1B58E009D538B /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2C424E1B58E009D538B /* Date+Additions.swift */; };
+		F3BDC2C724E1BFAF009D538B /* LocationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2C624E1BFAF009D538B /* LocationStatus.swift */; };
+		F3BDC2C924E1C021009D538B /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2C824E1C021009D538B /* SettingsStore.swift */; };
+		F3BDC2CB24E1CB78009D538B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2CA24E1CB78009D538B /* SettingsViewController.swift */; };
+		F3BDC2CD24E1D205009D538B /* WeatherServiceOperationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC2CC24E1D205009D538B /* WeatherServiceOperationStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		F3BDC2C024E1A734009D538B /* UIView+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadow.swift"; sourceTree = "<group>"; };
 		F3BDC2C124E1A734009D538B /* Decodable+Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Any.swift"; sourceTree = "<group>"; };
 		F3BDC2C424E1B58E009D538B /* Date+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
+		F3BDC2C624E1BFAF009D538B /* LocationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStatus.swift; sourceTree = "<group>"; };
+		F3BDC2C824E1C021009D538B /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		F3BDC2CA24E1CB78009D538B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F3BDC2CC24E1D205009D538B /* WeatherServiceOperationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceOperationStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				F3BDC2BD24E184F4009D538B /* AppConstants.swift */,
+				F3BDC2C624E1BFAF009D538B /* LocationStatus.swift */,
+				F3BDC2C824E1C021009D538B /* SettingsStore.swift */,
+				F3BDC2CC24E1D205009D538B /* WeatherServiceOperationStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 			children = (
 				F3BDC2B724E1823C009D538B /* MainWeatherViewController.swift */,
 				F3BDC2B924E18253009D538B /* DayWeatherViewController.swift */,
+				F3BDC2CA24E1CB78009D538B /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -418,11 +430,15 @@
 				F3BDC2BE24E184F4009D538B /* AppConstants.swift in Sources */,
 				F3BDC2B524E181BC009D538B /* AppContainer.swift in Sources */,
 				F3BDC2C524E1B58E009D538B /* Date+Additions.swift in Sources */,
+				F3BDC2CD24E1D205009D538B /* WeatherServiceOperationStatus.swift in Sources */,
 				F3BDC2B824E1823C009D538B /* MainWeatherViewController.swift in Sources */,
 				F3BDC2C324E1A735009D538B /* Decodable+Any.swift in Sources */,
 				F3BDC2B624E181BC009D538B /* Swinject+Storyboard.swift in Sources */,
+				F3BDC2C724E1BFAF009D538B /* LocationStatus.swift in Sources */,
+				F3BDC2CB24E1CB78009D538B /* SettingsViewController.swift in Sources */,
 				F3BDC2BA24E18253009D538B /* DayWeatherViewController.swift in Sources */,
 				F3BDC2BC24E1832F009D538B /* WeatherViewModel.swift in Sources */,
+				F3BDC2C924E1C021009D538B /* SettingsStore.swift in Sources */,
 				F3BDC2C224E1A735009D538B /* UIView+DropShadow.swift in Sources */,
 				F3BDC28624E07037009D538B /* AppDelegate.swift in Sources */,
 				F3BDC28824E07037009D538B /* SceneDelegate.swift in Sources */,
