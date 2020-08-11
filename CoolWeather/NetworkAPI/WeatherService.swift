@@ -10,9 +10,9 @@ import Foundation
 import Moya
 
 enum WeatherService {
-    case forecast(lat: String, lon: String, dt: Int)
-    case historical(lat: String, lon: String, cnt: Int)
-    case current(lat: String, lon: String)
+    case forecast(lat: Double, lon: Double, count: Int)
+    case historical(lat: Double, lon: Double, dt: Int)
+    case current(lat: Double, lon: Double)
 }
 
 extension WeatherService: TargetType {
@@ -44,20 +44,23 @@ extension WeatherService: TargetType {
         var parameters:[String: Any] = [:]
             
         switch self {
-            case .forecast(let lat, let lon, let dt):
+            case .forecast(let lat, let lon, let count):
                 parameters["lat"] = lat
                 parameters["lon"] = lon
-                parameters["dt"] = dt
+                parameters["cnt"] = count
                 parameters["appid"] = AppConstants.appID
+                parameters["units"] = "metric"
             case .historical(let lat, let lon, let dt):
                 parameters["lat"] = lat
                 parameters["lon"] = lon
                 parameters["dt"] = dt
                 parameters["appid"] = AppConstants.appID
+                parameters["units"] = "metric"
             case .current(let lat, let lon):
                 parameters["lat"] = lat
                 parameters["lon"] = lon
                 parameters["appid"] = AppConstants.appID
+                parameters["units"] = "metric"
         }
         
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)

@@ -9,16 +9,13 @@
 import UIKit
 
 class WeatherCastTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var lowTemp: UILabel!
+    @IBOutlet weak var highTemp: UILabel!
+    @IBOutlet weak var mainTemp: UILabel!
+    @IBOutlet weak var mainWeather: UILabel!
+    @IBOutlet weak var innerView: UIView!
+    
 }
