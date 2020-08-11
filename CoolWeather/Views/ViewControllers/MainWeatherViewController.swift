@@ -77,6 +77,7 @@ class MainWeatherViewController: UIViewController {
             let indexPath = sender as! IndexPath
             let keys:[String] = Array(self.viewModel.weatherCastsDaily.collection.keys.sorted())
             viewController.weatherCasts = self.viewModel.weatherCastsDaily.collection[keys[indexPath.row]]
+            viewController.city = self.viewModel.weatherCity.value
         }
     }
 }

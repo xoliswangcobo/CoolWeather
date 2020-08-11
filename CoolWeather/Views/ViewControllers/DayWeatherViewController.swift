@@ -12,6 +12,7 @@ class DayWeatherViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var weatherCasts: [WeatherCastForecast]!
+    var city: City?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class DayWeatherViewController: UIViewController {
         let date = Date.fromUnixTime(timestamp: weatherCasts.first?.timestamp() ?? 0)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = AppConstants.weatherCastDailyDateFormat
-        self.title = dateFormatter.string(from: date)
+        self.title = String(format: "%@ (%@)", dateFormatter.string(from: date), self.city?.name ?? "")
     }
 }
 
