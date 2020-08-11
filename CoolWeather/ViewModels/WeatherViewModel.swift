@@ -21,6 +21,7 @@ class WeatherViewModel: NSObject {
     var locationStatus = Observable<LocationStatus>(.Unknown)
     var operationStatus = Observable<WeatherServiceOperationStatus>(.None)
     var weatherCasts = MutableObservableArray<WeatherCastForecast>([])
+    var weatherCastsDaily = MutableObservableDictionary<String,[WeatherCastForecast]>([:])
     var weatherCity = Observable<City?>(try? City.decode([ "name": "", "country" : "", "sunset" : 0, "sunrise" : 0]))
     
     init(provider:MoyaProvider<WeatherService>, locationManager: CLLocationManager) {
@@ -39,6 +40,16 @@ class WeatherViewModel: NSObject {
                 do {
                     let castsResponse:WeatherCastForecastResponse? = try WeatherCastForecastResponse.decode(response.data)
                     self.weatherCasts.replace(with: castsResponse?.list ?? [])
+                    
+                    var dailyCasts: [String: Any] = [:]
+                    castsResponse?.list.forEach { cast in
+                        let key = "\(Date.fromUnixTime(timestamp: cast.timestamp()).zeroDay().unixTime())"
+                        var casts: [WeatherCastForecast] = (dailyCasts[key] as? [WeatherCastForecast]) ?? []
+                        casts.append(cast)
+                        dailyCasts[key] = casts
+                    }
+                    
+                    self.weatherCastsDaily.replace(with:dailyCasts)
                 } catch {
                     
                 }

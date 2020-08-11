@@ -28,15 +28,6 @@ class MainWeatherViewController: UIViewController {
             self.tableView.reloadData()
         }.dispose(in: self.bag)
         
-//        self.viewModel.weatherCasts.bind(to: self.tableView, cellType: WeatherCastTableViewCell.self) { (cell, weatherCast) in
-//            cell.date.text = "\(weatherCast.timestamp())"
-//            cell.icon.sd_setImage(with:URL.init(string: weatherCast.icon()))
-//            cell.lowTemp.text = "\(weatherCast.temp_min()) \u{00B0}"
-//            cell.mainTemp.text = "\(weatherCast.temp()) \u{00B0}"
-//            cell.highTemp.text = "\(weatherCast.temp_max()) \u{00B0}"
-//            cell.mainWeather.text = weatherCast.mainWeather()
-//        }
-        
         self.viewModel.locationStatus.observeNext { status in
             switch status {
                 case .Available:
