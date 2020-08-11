@@ -18,8 +18,9 @@ struct AppConstants {
     
     static let historyDaysLimit: Int = 5
     
-    static let forecastDaysLimit:Int = 7
+    static let forecastDaysLimit:Int = 5
     
     static let weatherCastDateFormat = "EEE dd, HH:mm"
     
+    static let weatherCastDailyDateFormat = "EEE dd"
 }

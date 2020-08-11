@@ -41,15 +41,15 @@ class WeatherViewModel: NSObject {
                     let castsResponse:WeatherCastForecastResponse? = try WeatherCastForecastResponse.decode(response.data)
                     self.weatherCasts.replace(with: castsResponse?.list ?? [])
                     
-                    var dailyCasts: [String: Any] = [:]
+                    var dailyCasts: [String: [WeatherCastForecast]] = [:]
                     castsResponse?.list.forEach { cast in
                         let key = "\(Date.fromUnixTime(timestamp: cast.timestamp()).zeroDay().unixTime())"
-                        var casts: [WeatherCastForecast] = (dailyCasts[key] as? [WeatherCastForecast]) ?? []
+                        var casts: [WeatherCastForecast] = (dailyCasts[key]) ?? []
                         casts.append(cast)
                         dailyCasts[key] = casts
                     }
                     
-                    self.weatherCastsDaily.replace(with:dailyCasts)
+                    let _ = self.weatherCastsDaily.replace(with:dailyCasts)
                 } catch {
                     
                 }
