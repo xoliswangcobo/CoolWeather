@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0D9B23FB3F59BBAAFB4C0A0 /* Pods_CoolWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918993258D742FF55DE49BAB /* Pods_CoolWeatherTests.framework */; };
-		CB8EB0840AB350C2A9DF03AB /* Pods_CoolWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28314FBA87DBD75D5B4288D0 /* Pods_CoolWeather.framework */; };
+		2C2D3988DC8D9EE215ADEDB9 /* libPods-CoolWeatherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1A674A3C6BD22C02C2ED61 /* libPods-CoolWeatherTests.a */; };
+		4EDDB8CDBE33D5FC349732F5 /* libPods-CoolWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC7400D05586561F6CCCC7B /* libPods-CoolWeather.a */; };
 		F36FD0CC24E220910058FAD8 /* WeatherCastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36FD0CB24E220910058FAD8 /* WeatherCastTableViewCell.swift */; };
 		F3BDC28624E07037009D538B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC28524E07037009D538B /* AppDelegate.swift */; };
 		F3BDC28824E07037009D538B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDC28724E07037009D538B /* SceneDelegate.swift */; };
@@ -47,11 +47,11 @@
 
 /* Begin PBXFileReference section */
 		0812E6D64EE0E7FEE5619165 /* Pods-CoolWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolWeather.release.xcconfig"; path = "Target Support Files/Pods-CoolWeather/Pods-CoolWeather.release.xcconfig"; sourceTree = "<group>"; };
-		28314FBA87DBD75D5B4288D0 /* Pods_CoolWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		566EF82BF2EC47F1B5A466F6 /* Pods-CoolWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolWeather.debug.xcconfig"; path = "Target Support Files/Pods-CoolWeather/Pods-CoolWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		5C371AA42CFD4A970E6E6741 /* Pods-CoolWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolWeatherTests.release.xcconfig"; path = "Target Support Files/Pods-CoolWeatherTests/Pods-CoolWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
-		918993258D742FF55DE49BAB /* Pods_CoolWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC7400D05586561F6CCCC7B /* libPods-CoolWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoolWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6AAC8622D66AA984874A63 /* Pods-CoolWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolWeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-CoolWeatherTests/Pods-CoolWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1A674A3C6BD22C02C2ED61 /* libPods-CoolWeatherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoolWeatherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36FD0CB24E220910058FAD8 /* WeatherCastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCastTableViewCell.swift; sourceTree = "<group>"; };
 		F3BDC28224E07037009D538B /* CoolWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BDC28524E07037009D538B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8EB0840AB350C2A9DF03AB /* Pods_CoolWeather.framework in Frameworks */,
+				4EDDB8CDBE33D5FC349732F5 /* libPods-CoolWeather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D9B23FB3F59BBAAFB4C0A0 /* Pods_CoolWeatherTests.framework in Frameworks */,
+				2C2D3988DC8D9EE215ADEDB9 /* libPods-CoolWeatherTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +116,8 @@
 		C13E88114F050AEC1374BD73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				28314FBA87DBD75D5B4288D0 /* Pods_CoolWeather.framework */,
-				918993258D742FF55DE49BAB /* Pods_CoolWeatherTests.framework */,
+				8AC7400D05586561F6CCCC7B /* libPods-CoolWeather.a */,
+				EF1A674A3C6BD22C02C2ED61 /* libPods-CoolWeatherTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,7 +281,6 @@
 				F3BDC27E24E07037009D538B /* Sources */,
 				F3BDC27F24E07037009D538B /* Frameworks */,
 				F3BDC28024E07037009D538B /* Resources */,
-				1795B4996A113ECDC30D9C65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,23 +389,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1795B4996A113ECDC30D9C65 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoolWeather/Pods-CoolWeather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoolWeather/Pods-CoolWeather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoolWeather/Pods-CoolWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8A7124293E27374EA5807BE /* [CP] Check Pods Manifest.lock */ = {

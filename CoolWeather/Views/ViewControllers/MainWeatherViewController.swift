@@ -43,8 +43,10 @@ class MainWeatherViewController: UIViewController {
             switch status {
                 case .Available:
                     self.noLocationView.isHidden = true
+                    self.tableView.isHidden = false
                 case .NotAvailable, .Unknown:
                     self.noLocationView.isHidden = false
+                    self.tableView.isHidden = true
             
             }
         }.dispose(in: self.bag)
