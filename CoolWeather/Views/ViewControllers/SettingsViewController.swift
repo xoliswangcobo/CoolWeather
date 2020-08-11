@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Bond
 
 class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
