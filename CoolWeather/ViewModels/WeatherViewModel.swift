@@ -20,6 +20,8 @@ class WeatherViewModel: NSObject {
     // Mark : Bond
     var locationStatus = Observable<LocationStatus>(.Unknown)
     var operationStatus = Observable<WeatherServiceOperationStatus>(.None)
+    var weatherCasts = MutableObservableArray<WeatherCastForecast>([])
+    var weatherCity = Observable<City?>(try? City.decode([ "name": "", "country" : "", "sunset" : 0, "sunrise" : 0]))
     
     init(provider:MoyaProvider<WeatherService>, locationManager: CLLocationManager) {
         self.provider = provider
@@ -28,6 +30,29 @@ class WeatherViewModel: NSObject {
         
         super.init()
         self.startLocationService()
+    }
+    
+    func getWeatherCasts(forecastDays: Int) {
+        self.provider.request(.forecast(lat: self.currentLocation.value.latitude, lon: self.currentLocation.value.longitude, count: 8*forecastDays)) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let castsResponse:WeatherCastForecastResponse? = try WeatherCastForecastResponse.decode(response.data)
+                    self.weatherCasts.replace(with: castsResponse?.list ?? [])
+                } catch {
+                    
+                }
+                
+                do {
+                    let cityResponse:City? = try City.decode(response.data)
+                    self.weatherCity.send(cityResponse)
+                } catch {
+                    
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -38,7 +63,7 @@ extension WeatherViewModel: CLLocationManagerDelegate {
         self.locationManager.activityType = .other
         self.locationManager.pausesLocationUpdatesAutomatically = true
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        self.locationManager.startMonitoringSignificantLocationChanges()
+        self.locationManager.startUpdatingLocation()
         
         if let location = self.locationManager.location {
             self.currentLocation.send(location.coordinate)
