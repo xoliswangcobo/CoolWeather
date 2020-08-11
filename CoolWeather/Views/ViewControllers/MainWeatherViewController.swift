@@ -24,7 +24,6 @@ class MainWeatherViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
     }
@@ -59,7 +58,9 @@ class MainWeatherViewController: UIViewController {
             }
         }.dispose(in: self.bag)
         
-        self.viewModel.getWeatherCasts(forecastDays: self.settings.forecastDays)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+            self.viewModel.getWeatherCasts(forecastDays: self.settings.forecastDays)
+        }
     }
     
     @IBAction func goToPhoneSettings(sender: UIButton) {
